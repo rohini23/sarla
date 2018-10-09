@@ -20,9 +20,7 @@ console.log("header = ", header);
 var links = header.querySelector(".deactive > a");
 console.log("links = ", links);
 for (var i = 0; i < links.length; i++) {
-  console.log("-----");
   links[i].addEventListener("click", function() {
-    console.log("-----");
     var current = document.querySelector(".active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -51,7 +49,7 @@ function changeSelectedProduct(e) {
   var key = e.keyCode ? e.keyCode : e.which;
   if (key === 40) {
     var temp = current && current.nextElementSibling;
-    if (!temp) return;
+    if (!temp.classList.contains("prod-item")) return;
     if (temp.classList.contains("prod-item")) {
       current.classList.remove("active");
       current.classList.add("deactive");
@@ -63,7 +61,7 @@ function changeSelectedProduct(e) {
   }
   if (key === 38) {
     var temp = current && current.previousElementSibling;
-    if (!temp) return;
+    if (!temp.classList.contains("prod-item")) return;
     current.classList.remove("active");
     current.classList.add("deactive");
     current = temp;
@@ -72,3 +70,23 @@ function changeSelectedProduct(e) {
     // current.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
+document.body.onscroll = function() {
+  var y = document.body.getBoundingClientRect().y;
+  console.log("---", y);
+  if (y < 30) {
+    document.querySelector("html").classList.add("navbar-pt");
+    document.querySelector(".navbar-brand").classList.add("navbar-mh");
+    document.querySelector(".navbar").classList.add("navbar-mh");
+    document.querySelector(".navbar-item").classList.add("navbar-item-p");
+    document.querySelector(".navbar-burger").classList.add("navbar-burger-h");
+  }
+  if (y > 30) {
+    document.querySelector("html").classList.remove("navbar-pt");
+    document.querySelector(".navbar-brand").classList.remove("navbar-mh");
+    document.querySelector(".navbar").classList.remove("navbar-mh");
+    document.querySelector(".navbar-item").classList.remove("navbar-item-p");
+    document
+      .querySelector(".navbar-burger")
+      .classList.remove("navbar-burger-h");
+  }
+};
