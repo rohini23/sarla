@@ -1,29 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+/* ====================================body============================= */
 body {
-  width: 1024px;
-  margin: 0 auto;
+  /* width: 1024px; */
+  /* margin: 0 auto; */
   font-size: 10px;
   font-family: "Rubik", sans-serif;
 }
-.navbar {
-  width: 1024px;
-  margin: auto;
-}
+/* ====================================nav bar========================== */
 .navbar ul {
   display: flex;
   align-content: space-between;
-}
-.navbar-start a {
-  padding: 0 15px;
 }
 .stoke > ul > li:first-child {
   margin-right: 20px;
 }
 .nav-padding {
   padding: 0 8px !important;
-}
-.navbar-item {
-  /* padding: 0px 15px !important; */
 }
 .link {
   margin-left: 5px;
@@ -38,17 +30,15 @@ body {
 .fw-400 {
   font-weight: 400 !important;
 }
+/* ==========================================hero================================= */
 .hero {
-  height: 590px;
-  /* width: 100vw; */
   background-image: url(/assets/images/product-hero.jpg);
   background-repeat: no-repeat;
-  background-size: 130% 160%;
-  background-position: 24% 32%;
+  background-size: cover;
+  background-position: center -125px;
 }
-.hero-body > .container {
-  transform: translateY(192%) !important;
-  padding: 0 50px;
+.is-fullheight {
+  min-height: calc(100vh - 36px);
 }
 .hero-heading {
   font-weight: 400 !important;
@@ -71,9 +61,9 @@ body {
   font-size: 20px;
   line-height: 22px;
 }
+/* ====================================product details================================ */
 .prod-details {
   color: white;
-  height: 590px;
   background-image: url(/assets/images/prod_img.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -88,9 +78,13 @@ body {
 }
 .list a {
   color: white;
+  text-decoration: none;
 }
 .list .icon {
   font-size: 18px;
+}
+.prod-list-ul i {
+  cursor: pointer;
 }
 .active {
   font-size: 30px;
@@ -115,13 +109,102 @@ body {
   height: 47px;
   margin-left: 20px !important;
 }
+.is-outlined:hover {
+  background-color: rgba(116, 93, 93, 0.438) !important;
+  color: #fff !important;
+}
+/* ========================================details/scroll bar=======================*/
+.prod-details > .wrapper {
+  display: flex;
+}
+.details .subtitle {
+  color: #afca21;
+  font-weight: 500;
+  font-size: 14px;
+}
+.close-btn {
+  float: right;
+  margin: 10px;
+  position: absolute;
+  background-attachment: fixed;
+  right: 5px;
+}
+.close-btn a {
+  font-size: 10px;
+}
+.fa-times {
+  font-size: 25px;
+  margin-left: 7px;
+}
+.p-5 {
+  padding: 6px 0px;
+}
+.p-20 {
+  padding: 23px 0px;
+}
+.list a {
+  color: white;
+}
+.list .icon {
+  font-size: 18px;
+}
+.active {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 0px;
+  /* width: 178px; */
+}
+.details {
+  padding-top: 11px;
+  padding-left: 36px;
+  width: 680px;
+}
+.prod-details {
+  position: relative;
+}
+.scroll-bar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 400ms ease-in;
+  transform: translateX(100%);
+  background-color: #fff;
+  color: black;
+  overflow-y: scroll;
+  z-index: 1;
+  min-width: 900px;
+}
+.scroll-bar.active {
+  transform: translateX(0%);
+}
+.details-heading {
+  margin-top: 0;
+  margin-bottom: 5px !important;
+}
+.detail li {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.detail {
+  margin-bottom: 24px;
+}
+table {
+  color: black;
+}
+table th {
+  box-sizing: border-box;
+  width: 93px !important;
+  font-weight: 500 !important;
+}
+.heading-color {
+  background-color: #afca21 !important;
+}
+/* =========================================further info=============================*/
 .further-info {
   height: 390px;
   display: flex;
   align-items: center;
-}
-.further-info > .container {
-  padding: 0 76px;
 }
 .further-info .title {
   /* width: 53.5%; */
@@ -134,6 +217,97 @@ body {
   width: 618px;
   font-size: 12px;
 }
+/* ====================connect with us============= */
+
+.ht-498px {
+  height: 498px;
+}
+.wd-350 {
+  width: 350px;
+}
+.ht-498 {
+  height: 498px;
+}
+.wd-410 {
+  width: 410px;
+}
+.ht-39 {
+  height: 39px;
+}
+.ht-inp-24 {
+  height: 24px;
+}
+.ht-131 {
+  height: 131px;
+}
+.mb-28 {
+  margin-bottom: 28px;
+}
+.mb-44 {
+  margin-bottom: 44px;
+}
+.mt-52 {
+  margin-top: 52px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.connect-with-us > figure {
+  background-image: url("../images/connect.jpg");
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 498px;
+  background-size: 100%;
+}
+.connect-with-us .contact-form {
+  margin: 0 179px 0 86px;
+}
+.connect-with-us .contact-form > h3 {
+  font-size: 45px;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #00879e;
+  font-weight: normal;
+}
+.inp .form-label {
+  top: 15px;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #616161;
+  margin-bottom: 10px;
+  position: absolute;
+  transition: all 0.1s ease-in;
+}
+.inp label {
+  width: 100%;
+  display: block;
+  position: relative;
+  font-size: 15px;
+}
+.inp input {
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+  color: #fe3f04;
+  padding-bottom: 9px;
+}
+.inp input:focus + span,
+.inp input:valid + span {
+  top: 3px;
+  font-size: 10px;
+}
+.inp-textarea > textarea {
+  border-color: #979797;
+  padding: 9px 0 0 10px;
+  font-size: 15px;
+}
+.submit-btn {
+  padding: 16px 51px 16px 50px;
+}
 /* ====================footer====================== */
 
 .corporate-office h4 {
@@ -142,9 +316,10 @@ body {
 }
 
 footer {
-  width: 1024px;
+  /* width: 1024px; */
   height: 466px;
   background-color: #f6f6f6;
+  padding: 52px 111px;
 }
 /* ===================================footer-left========================== */
 address {
@@ -159,7 +334,7 @@ footer {
 .office-wrapper,
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .office-wrapper {
   margin-bottom: 58px;
@@ -172,7 +347,7 @@ footer {
   text-transform: uppercase;
 }
 .footer-left {
-  margin: 52px 0 84px 95px;
+  /* padding: 52px 0 84px 111px; */
   font-size: 10px;
   height: 330px;
 }
@@ -193,6 +368,10 @@ footer {
 }
 .phone-no {
   margin-top: 18px;
+}
+.phone-no > ul > li:last-child {
+  border-bottom: 1px solid black;
+  display: inline;
 }
 .quick-links {
   height: 155px;
@@ -238,7 +417,7 @@ footer {
   color: #1d1d1d;
 }
 .footer-right {
-  margin: 50px 94px 85px 79px;
+  /* padding: 50px 111px 85px 79px; */
   height: 330px;
 }
 .footer-submit-btn {
@@ -260,4 +439,24 @@ footer {
 }
 .footer-right .inp input {
   color: #1d1d1d;
+}
+
+/* ====================scroll change height=================== */
+.navbar {
+  transition: all 250ms ease-in;
+}
+.navbar-mh {
+  min-height: 2.25rem;
+}
+
+.navbar-pt {
+  padding-top: 2.25rem;
+}
+
+.navbar-item-p {
+  padding: 0 0.75rem;
+}
+
+.navbar-burger-h {
+  height: 2.25rem;
 }
