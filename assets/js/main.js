@@ -148,8 +148,10 @@ window.addEventListener("scroll", function(e) {
   // console.log(connectTop, window.innerHeight * 0.6);
   if (connectTop < window.innerHeight * 0.6 && connectTop > 10) {
     document.querySelector(".contact-us").classList.add("nav-active");
+    document.querySelector(".product").classList.remove("nav-active");
   } else {
     document.querySelector(".contact-us").classList.remove("nav-active");
+    document.querySelector(".product").classList.add("nav-active");
   }
 });
 
